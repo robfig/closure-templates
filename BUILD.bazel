@@ -4,3 +4,17 @@ package_group(
         "//...",
     ],
 )
+
+java_binary(
+    name = "CompileSoy",
+    srcs = ["CompileSoy.java"],
+    main_class = "main.CompileSoy",
+    deps = [
+        "//java/src/com/google/template/soy",
+        "//java/src/com/google/template/soy/error",
+        "//java/src/com/google/template/soy/error:soy_error_api",
+        "@maven//:com_google_guava_guava",
+        "@maven//:com_google_inject_extensions_guice_multibindings",
+        "@maven//:com_google_inject_guice",
+    ],
+)
